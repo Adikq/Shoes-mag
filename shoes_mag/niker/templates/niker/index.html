@@ -1,0 +1,126 @@
+{% extends 'niker/base.html' %}
+{% load category_tags %}
+{% load last_added_tags %}
+
+{% block category %}
+    {%get_categories as categories%}
+    <section class="category_section">
+        <div class="category_wrapper">
+            {%for category in categories%}
+            <div class="category_title">
+                <a href="{{category.get_absolute_url}}" class="category-title_link">
+                    {{category.title}}
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+{% block last_added %}
+{% get_last_added %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- {% load static %}
+{% load category_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'niker/css/index.css' %}"> 
+    <link rel="stylesheet" href="{%  static 'niker/slick/slick.css' %}">
+    <link rel="stylesheet" href="{%  static 'niker/slick/slick-theme.css' %}">
+
+</head>
+<body>
+    <a href="{{shoes.get_absolute_url}}">{{shoes.title}}</a>
+    {%get_categories as categories%}
+    {%for category in categories%}
+    <a href="{{category.get_absolute_url}}">{{category.title}}</a>
+    {%endfor%}
+    <h3 class="sear-head editContent">Пол</h3>
+    <form action="{% url 'filter' %}">
+        <ul class="w3layouts-box-list">
+        {% for sex in view.get_sex %}
+        <li class="editContent">
+            <input type="checkbox" class="checked" name="sex" value="{{ sex.id }}">
+            <span class="span-editContent">{{sex.title}}</span>
+        </li>
+        {% endfor %}
+        </ul>
+        <button type="submit">Фильтровать</button>
+    </form>
+    <form action="{% url 'search' %}" method="get">
+        <input type="search" name="q">
+        <button type="submit">Найти</button>
+    </form>
+
+    <div class="slider">
+        {%for shoes in shoes_list %}
+        <div class="slide">
+            <div class="name">{{shoes.title}}</div>
+            <div class="price">3500</div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>    
+    <script type="text/javascript" src="{% static 'niker/slick/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'niker/js/main.js' %}"></script>
+
+</body>
+</html> -->
+
+

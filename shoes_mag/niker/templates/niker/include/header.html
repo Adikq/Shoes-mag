@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_menu">
+                <div class="header_logo">
+                    <a href="{% url 'home' %}" class="header_logo-link">
+                        <h1 class="header_logo-text">LUX CROSS</h1>
+                    </a>
+                </div>
+                <div class="header_favorite-img">
+                    <a href="#" class="header_favorite_img-link">
+                        <img src="{% static 'niker/img/favorite-heart.svg' %}" alt="" class="header_favorite_img-logo">
+                    </a>
+                </div>
+                <div class="header-search_section">
+                    <form action="{% url 'search' %}" method="get">
+                        {% csrf_token %}
+                        <input type="search" placeholder="Название обуви" name="q">
+                        <button type="submit" >Найти</button>
+                    </form>
+                </div>
+                <div class="autorization-section">
+                    <a href="" class="sign-in">
+                        SIGN-IN
+                    </a>
+                    <a href="" class="register">
+                        REGISTER
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,86 @@
+{% extends 'niker/base.html' %}
+
+{% block shoes_detail %}
+
+<div class="desk">
+    <div class="left">
+        <div class="shoes-detail_section">
+            <div class="shoes-detail-section_image">
+                <img src="{{shoes.img.url}}" alt="" class="shoes-detail-section_img">
+            </div>
+            <div class="shoes-detail_model">
+                <p class="shoes-detail-model_title">
+                    Название модели: {{shoes.title}}
+                </p>
+            </div>
+            <div class="shoes-detail-section_color">
+                <p class="shoes-detail-section-color_text">Цвет:  {{shoes.color}}</p>
+            </div>
+            <div class="shoes-detail-section_size">
+                <p class="shoes-detail-section-size_text">
+                    Размеры:
+                </p>
+                <p class="shoes-detail-section_text_size">
+                    {% for size in shoes.size.all %}
+                     {{size.size}}
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <form action="{% url 'addorder' shoes.id %}" method="post">
+            {%csrf_token%}
+            <div class="add_order_name">
+                <label for="username">Name</label>
+                <input type="text" class="name"
+                       name='name' id="username" required="">
+            </div>
+            <div class="add_order_number">
+                <label for="usernumber">Number</label>
+                <input type="text" class="number"
+                       name='number' id="usernumber" required="">
+            </div>
+            <div class="address">
+                <label for="useraddres">Addres</label>
+                <input type="text" class="address"
+                       name='address' id="useraddres" required="">
+            </div>
+            <button type="submit" class="mt-3 btn btn-success btn-block py-3">
+                Заказать
+            </button>
+        </form>
+        <div class="extra-image_section">
+            {% for image in shoes.shoesphoto_set.all %}
+            <img src="{{image.img.url}}" alt="" class="extra-image-section_img">
+            {%endfor%}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+    <!-- <h2>{{shoes.title}}</h2>
+    <form action="{% url 'addorder' shoes.id %}" method="post" class="mt-4">
+        {% csrf_token %}
+        <div class="username">
+            <label for="username">Name</label>
+            <input type="text" class="form-control border"
+                   name='name' id="username" required="">
+        </div>
+        <div class="number">
+            <label for="usernumber">Number</label>
+            <input type="text" class="form-control border"
+                   name='number' id="usernumber" required="">
+        </div>
+        <div class="place">
+            <label for="useraddres">Addres</label>
+            <input type="text" class="form-control border"
+                   name='get_product_place' id="useraddres" required="">
+        </div>
+        <button type="submit"
+                class="mt-3 btn btn-success btn-block py-3">
+            Отправить
+        </button>
+    </form> -->

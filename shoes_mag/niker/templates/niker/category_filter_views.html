@@ -1,0 +1,28 @@
+{% extends 'niker/base.html' %}
+{% include 'niker/include/header.html' %}
+
+
+{% block filter_category %}
+
+
+<div class="shoes-section">
+    {% for shoes in shoes_list %}
+    <div class="shoes">
+        <div class="shoes-image_section">
+            <img src="{{shoes.img.url}}" alt="">
+        </div>
+        
+        <div class="shoes-title_section">
+            <h2 class="shoes-title-section_text">
+                <a href="{{shoes.get_absolute_url}}">
+                    {{shoes.title}}
+                </a>
+            </h2>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    
+
+
+{% endblock %}

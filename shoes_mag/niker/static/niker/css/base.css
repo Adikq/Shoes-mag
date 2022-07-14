@@ -1,0 +1,173 @@
+a{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    margin: 0;
+    padding: 15px 0;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header_menu{
+    display: flex;
+    align-items: center;
+}
+
+.header_logo{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin-right: auto;
+    color: #111111;
+}
+.header_logo-text{
+    color: #111111;
+}
+.header_favorite-img {
+    width: 30px;
+    margin-right: 18px;
+}
+
+.sign-in, .register{
+    font-size: 18px;
+    color: #111111;
+}
+
+.sign-in:hover, .register:hover{
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    transition: 0.2s ease;
+}
+.register::before{
+    content: '/';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.category_wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: #111111;
+    padding: 15px;
+}
+
+.category_title{
+    text-align: center;
+    align-items: center;
+}
+
+.category-title_link{
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.last_added{
+    margin-top: 25px;
+}
+
+.last-added_title{
+    font-size: 25px;
+}
+
+.last-added-shoes_slider{
+    margin-top: 25px;
+}
+
+.last-added-shoes_images{
+    margin-bottom: 10px;
+}
+
+.last-added-shoes_img{
+    width: 250px;
+    height: 200px;
+}
+
+.last-added-shoes_link{
+    color: #111111;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.desk{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.shoes-detail_section{
+    font-size: 22px;
+}
+
+.shoes-detail-section_img{
+    width: 400px;
+}
+
+.shoes-detail-section_image{
+    margin-bottom: 18px;
+}
+
+.shoes-detail-section-color_text{
+    margin-bottom: 18px;
+}
+
+.shoes-detail-section_size{
+    display: flex;
+}
+
+.shoes-detail-section_text_size{
+    margin-left: 15px;
+}
+
+.shoes-detail_model{
+    margin-bottom: 18px;
+}
+
+.left{
+    width: 50%;
+    margin-right: 150px;
+}
+
+.right{
+    text-align: center;
+}
+
+.name,
+.number,
+.address{
+    width: 250px;
+    padding: 8px 10px;
+    border-radius: 8%;
+}
+
+.extra-image_section{
+    margin-top: 25px;
+    display: flex;
+}
+
+.extra-image-section_img{
+    width: 250px;
+}
+
+.shoes-section{
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,18 @@
+{% load static %}
+<section class="last_added">
+    <h3 class="last-added_title">Последние новинки</h3>
+    <div class="last-added-shoes_slider">
+        {% for shoes in last_shoes %}
+        <div class="slide">
+            <div class="last-added-shoes_images">
+                <img src="{{shoes.img.url}}" alt="" class="last-added-shoes_img">
+            </div>
+            <div class="last-added-shoes_title">
+                <a href="{{shoes.get_absolute_url}}" class="last-added-shoes_link">
+                    {{shoes.title}}
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
